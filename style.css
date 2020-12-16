@@ -1,0 +1,46 @@
+:root {
+  --wheat: #D9C179;
+  --tan: #D9CBA3;
+  --brown: #736140;
+  --lightbrown: #A6977C;
+  --offwhite: #F2EBDC;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+
+  background: repeating-linear-gradient( to left, var(--offwhite), var(--lightbrown));
+
+  font-family: 'Josefin Sans', sans-serif;
+  color: white;
+}
+
+.video {
+  border-top: solid 2px var(--tan);
+  border-bottom: solid 2px var(--tan);
+}
+
+.space_break {
+  width: 100%;
+  height: 200px;
+  font-weight: bold;
+  text-shadow: 1px 1px var(--wheat);
+}
+
+.banner_text {
+  line-height: 200px;
+  font-size: 38px;
+  text-align: center;
+}
+
+.poem_text {
+  font-size: 26px;
+  text-align: left;
+  margin-left: 5%;
+}

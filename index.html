@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="@charles_codes">
+    <meta name="description" content="A Photography Portfolio">
+    <meta name="keywords" content="photos photo photography gallery portfolio">
+
+    <title>GALLERY</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- CDN link to jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+
+    <!-- link to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <video class="video" width="100%" muted="muted">
+      <source src="videos/kalispell_snowfall_garden.mp4" type="video/mp4">
+    </video>
+
+    <div class="space_break banner_text">WITH THE DRAWING OF THIS LOVE AND THE VOICE OF THIS CALLING</div>
+
+    <video class="video" width="100%" muted="muted">
+      <source src="videos/kalispell_cloudy_snowfall.mp4" type="video/mp4">
+    </video>
+
+    <div class="space_break">
+      <p class="poem_text">WE SHALL NOT CEASE FROM EXPLORATION</p>
+      <p class="poem_text">AND THE END OF ALL OUR EXPLORING</p>
+      <p class="poem_text">WILL BE TO ARRIVE WHERE WE STARTED</p>
+      <p class="poem_text">AND KNOW THE PLACE FOR THE FIRST TIME<p>
+  </div>
+
+    <video class="video" width="100%" muted="muted">
+      <source src="videos/kalispell_walk.mp4" type="video/mp4">
+    </video>
+
+    <div class="space_break">
+      <p class="poem_text">THROUGH THE UNKOWN, UNREMEMBERED GATE</p>
+      <p class="poem_text">WHEN THE LAST OF EARTH LEFT TO DISCOVER</p>
+      <p class="poem_text">IS THAT WHICH WAS THE BEGINNING</p>
+    </div>
+
+    <video class="video" width="100%" muted="muted">
+      <source src="videos/mtbrown_walk.mp4" type="video/mp4">
+    </video>
+
+    <div class="space_break">
+      <p class="poem_text">AND ALL SHALL BE WELL AND</p>
+      <p class="poem_text">ALL MANNER OF THING SHALL BE WELL</p>
+    </div>
+
+    <!-- jQuery script to play/pause video on mouseover and mouseout -->
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $(".video").on("mouseover", function(event) {
+          this.play();
+        }).on("mouseout", function(event) {
+          this.pause();
+        });
+      })
+    </script>
+  </body>
+</html>
