@@ -11,59 +11,121 @@
 
     <link rel="stylesheet" type="text/css" href="style.css">
 
-    <!-- CDN link to jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
-
     <!-- link to Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+    <!-- link to jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
   </head>
   <body>
-    <video class="video" width="100%" muted="muted">
-      <source src="videos/kalispell_snowfall_garden.mp4" type="video/mp4">
-    </video>
 
-    <div class="space_break banner_text">WITH THE DRAWING OF THIS LOVE AND THE VOICE OF THIS CALLING</div>
+    <script src="logic.js"></script>
 
-    <video class="video" width="100%" muted="muted">
-      <source src="videos/kalispell_cloudy_snowfall.mp4" type="video/mp4">
-    </video>
-
-    <div class="space_break">
-      <p class="poem_text">WE SHALL NOT CEASE FROM EXPLORATION</p>
-      <p class="poem_text">AND THE END OF ALL OUR EXPLORING</p>
-      <p class="poem_text">WILL BE TO ARRIVE WHERE WE STARTED</p>
-      <p class="poem_text">AND KNOW THE PLACE FOR THE FIRST TIME<p>
-  </div>
-
-    <video class="video" width="100%" muted="muted">
-      <source src="videos/kalispell_walk.mp4" type="video/mp4">
-    </video>
-
-    <div class="space_break">
-      <p class="poem_text">THROUGH THE UNKOWN, UNREMEMBERED GATE</p>
-      <p class="poem_text">WHEN THE LAST OF EARTH LEFT TO DISCOVER</p>
-      <p class="poem_text">IS THAT WHICH WAS THE BEGINNING</p>
+    <!-- side by side video container -->
+    <div class="video_container">
+      <video class="video video_snowfall" width="50%" muted="muted" autoplay loop>
+        <source src="videos/kalispell_snowfall_garden.mp4" type="video/mp4">
+      </video>
+      <video class="video video_snowfall" width="50%" muted="muted" autoplay loop>
+        <source src="videos/kalispell_cloudy_snowfall.mp4" type="video/mp4">
+      </video>
+      <div class="text_block">
+        <p class="poem_text_1">WITH THE DRAWING OF THIS LOVE</p>
+        <p class="poem_text_1">AND THE VOICE OF THIS CALLING</p>
+      </div>
+      <div class="text_block_2">
+        <p class="poem_text_1">AND ALL SHALL BE WELL AND</p>
+        <p class="poem_text_1">ALL MANNER OF THING SHALL BE WELL</p>
+      </div>
     </div>
 
-    <video id="walk_video_2" class="video" width="100%" muted="muted">
-      <source src="videos/mtbrown_walk.mp4" type="video/mp4">
-    </video>
-
-    <div class="space_break">
-      <p class="poem_text">AND ALL SHALL BE WELL AND</p>
-      <p class="poem_text">ALL MANNER OF THING SHALL BE WELL</p>
+    <!-- back to back rotated video container -->
+    <div class="video_container video_container_2">
+      <video id="walk_video_1" class="video" width="50%" muted="muted" autoplay loop>
+        <source src="videos/kalispell_walk.mp4" type="video/mp4">
+      </video>
+      <video id="walk_video_2" class="video" width="50%" muted="muted" autoplay loop>
+        <source src="videos/mtbrown_walk.mp4" type="video/mp4">
+      </video>
+      <div class="text_block_3">
+        <p class="poem_text_2">WHAT LIVES</p>
+        <p class="poem_text_2">BESIDE US</p>
+        <p class="poem_text_2">PASSING</p>
+        <p class="poem_text_2">FOR AIR</p>
+      </div>
     </div>
 
-    <!-- jQuery script to play/pause video on mouseover and mouseout -->
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $(".video").on("mouseover", function(event) {
-          this.play();
-        }).on("mouseout", function(event) {
-          this.pause();
-        });
-      })
-    </script>
+    <!-- image gallery header container -->
+    <div class="gallery_header">
+      <h1>GALLERY</h1>
+      <p>Display Viewing Mode</p>
+      <button class="button active" onclick="displayQuarter()">25%</button>
+      <button class="button" onclick="displayThird()">33%</button>
+      <button class="button" onclick="displayHalf()">50%</button>
+      <button class="button" onclick="displayWhole()">100%</button>
+    </div>
+
+    <!-- image gallery container -->
+    <div class="row">
+      <div class="column">
+        <img class="photo" src="images/avalanche_creek.JPG" alt="Avalanche Creek" style="width:100%">
+        <img class="photo" src="images/avalanche_creek_2.JPG" alt="Avalanche Creek" style="width:100%">
+        <img class="photo" src="images/avalanche_lake.JPG" alt="Avalanche Lake" style="width:100%">
+        <img class="photo" src="images/avalanche_lake_2.JPG" alt="Avalanche Lake" style="width:100%">
+        <img class="photo" src="images/bob_marshall_sign.JPG" alt="Entry Sign for the Bob Marshall Wilderness Area" style="width:100%">
+        <img class="photo" src="images/chateau.JPG" alt="Mountain Lodge near Mt. Rainier" style="width:100%">
+        <img class="photo" src="images/dusty_road.JPG" alt="Dusty Road near Flathead Lake" style="width:100%">
+        <img class="photo" src="images/fire_rake.JPG" alt="Backcountry Firefighter's Rake" style="width:100%">
+        <img class="photo" src="images/fox.JPG" alt="Fox" style="width:100%">
+        <img class="photo" src="images/holland_lake_trail.JPG" alt="Trail towards Holland Lake" style="width:100%">
+      </div>
+      <div class="column">
+        <img class="photo" src="images/kalispell.JPG" alt="Creston" style="width:100%">
+        <img class="photo" src="images/kalispell_hoop.JPG" alt="Abandoned Basketball Hoop in Creston" style="width:100%">
+        <img class="photo" src="images/kalispell_hut.JPG" alt="Hut in Creston" style="width:100%">
+        <img class="photo" src="images/kalispell_hut_2.JPG" alt="Hut in Creston" style="width:100%">
+        <img class="photo" src="images/kalispell_rainbow.JPG" alt="Rainbow above Creston" style="width:100%">
+        <img class="photo" src="images/kalispell_rainbow_2.JPG" alt="Rainbow above Creston" style="width:100%">
+        <img class="photo" src="images/kalispell_stumps.JPG" alt="Tree Stumps in Creston" style="width:100%">
+        <img class="photo" src="images/kalispell_ultralightbeam.JPG" alt="Lightbeam shining on Creston" style="width:100%">
+        <img class="photo" src="images/lake_mcdonald.JPG" alt="Lake McDonald" style="width:100%">
+        <img class="photo" src="images/lion_creek.JPG" alt="Lion Creek" style="width:100%">
+      </div>
+      <div class="column">
+        <img class="photo" src="images/lion_creek_mushroom.JPG" alt="Mushroom found near Lion Creek" style="width:100%">
+        <img class="photo" src="images/lion_creek_mushroom_2.JPG" alt="Mushroom found near Lion Creek" style="width:100%">
+        <img class="photo" src="images/lower_holland_lake.JPG" alt="Lower Holland Creek" style="width:100%">
+        <img class="photo" src="images/mtbrown.JPG" alt="Mt. Brown" style="width:100%">
+        <img class="photo" src="images/mtbrown_2.JPG" alt="Mt. Brown" style="width:100%">
+        <img class="photo" src="images/mtbrown_lookout.JPG" alt="Fire Lookout on Mt. Brown" style="width:100%">
+        <img class="photo" src="images/mtbrown_trail.JPG" alt="Trail towards Mt. Brown" style="width:100%">
+        <img class="photo" src="images/mtbrowntrail_2.JPG" alt="Trail towards Mt. Brown" style="width:100%">
+        <img class="photo" src="images/mtrainier.JPG" alt="Mt. Rainier" style="width:100%">
+        <img class="photo" src="images/mtrainier_2.JPG" alt="Mt. Rainier" style="width:100%">
+      </div>
+      <div class="column">
+        <img class="photo" src="images/pyramid_lake.JPG" alt="Pyramid Lake" style="width:100%">
+        <img class="photo" src="images/pyramid_lake_2.JPG" alt="Pyramid Lake" style="width:100%">
+        <img class="photo" src="images/pyramid_lake_3.JPG" alt="Pyramid Lake" style="width:100%">
+        <img class="photo" src="images/pyramid_lake_4.JPG" alt="Pyramid Lake" style="width:100%">
+        <img class="photo" src="images/pyramid_lake_5.JPG" alt="Pyramid Lake" style="width:100%">
+        <img class="photo" src="images/pyramid_lake_6.JPG" alt="Pyramid Lake" style="width:100%">
+        <img class="photo" src="images/pyramid_lake_feet.JPG" alt="Lounging by Pyramid Lake" style="width:100%">
+        <img class="photo" src="images/pyramid_lake_trail.JPG" alt="Trail towards Pyramid Lake" style="width:100%">
+        <img class="photo" src="images/upper_holland_lake.JPG" alt="Upper Holland Lake" style="width:100%">
+        <img class="photo" src="images/whitefish_big_mountain.JPG" alt="Big Mountain near Whitefish" style="width:100%">
+      </div>
+
+      <!-- <div> for holding the image modal information -->
+        <div id="myModal" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal_content" id="modal_img">
+          <div id="caption"></div>
+        </div>
+    </div>
+
+    <!-- link to external javascript file logic.js -->
+    <script src="logic.js"></script>
   </body>
 </html>
