@@ -90,3 +90,9 @@ html, body {
   margin-top: 8px;
   vertical-align: middle;
 }
+
+/* style for buttons and image gallery container text */
+
+.active {
+  color: blue;
+}

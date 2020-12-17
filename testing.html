@@ -14,6 +14,9 @@
     <!-- link to Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+    <!-- link to jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
   </head>
   <body>
     <!-- side by side video container -->
@@ -44,6 +47,16 @@
       </video>
     </div>
 
+    <!-- image gallery header container -->
+    <div class="gallery_header">
+      <h1>GALLERY</h1>
+      <p>Display Viewing Mode</p>
+      <button class="button active" onclick="displayQuarter()">25%</button>
+      <button class="button" onclick="displayThird()">33%</button>
+      <button class="button" onclick="displayHalf()">50%</button>
+      <button class="button" onclick="displayWhole()">100%</button>
+    </div>
+
     <!-- image gallery container -->
     <div class="row">
       <div class="column">
@@ -57,6 +70,8 @@
         <img src="images/fire_rake.JPG" style="width:100%">
         <img src="images/fox.JPG" style="width:100%">
         <img src="images/holland_lake_trail.JPG" style="width:100%">
+      </div>
+      <div class="column">
         <img src="images/kalispell.JPG" style="width:100%">
         <img src="images/kalispell_hoop.JPG" style="width:100%">
         <img src="images/kalispell_hut.JPG" style="width:100%">
@@ -79,6 +94,8 @@
         <img src="images/mtbrowntrail_2.JPG" style="width:100%">
         <img src="images/mtrainier.JPG" style="width:100%">
         <img src="images/mtrainier_2.JPG" style="width:100%">
+      </div>
+      <div class="column">
         <img src="images/pyramid_lake.JPG" style="width:100%">
         <img src="images/pyramid_lake_2.JPG" style="width:100%">
         <img src="images/pyramid_lake_3.JPG" style="width:100%">
@@ -91,5 +108,48 @@
         <img src="images/whitefish_big_mountain.JPG" style="width:100%">
       </div>
     </div>
+
+    <script type="text/javascript">
+    // script to switch flex display viewing mode
+      var items = $(".column");
+
+      var i;
+
+      function displayQuarter() {
+        for (i = 0; i < items.length; i++) {
+          items[i].style.flex = "25%";
+        }
+      }
+
+      function displayThird() {
+        for (i = 0; i < items.length; i++) {
+          items[i].style.flex = "33%";
+        }
+      }
+
+      function displayHalf() {
+        for (i = 0; i < items.length; i++) {
+          items[i].style.flex = "50%";
+        }
+      }
+
+      function displayWhole() {
+        for (i = 0; i < items.length; i++) {
+          items[i].style.flex = "100%";
+        }
+      }
+
+      // script to add active class to currently selected button
+      var header = $(".gallery_header");
+      var buttons = $(".button");
+
+      for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", function() {
+          var selectedButton = $(".active");
+          selectedButton[0].className = selectedButton[0].className.replace(" active", "");
+          this.className += " active";
+        });
+      }
+    </script>
   </body>
 </html>
