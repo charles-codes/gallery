@@ -97,6 +97,10 @@ html, body {
   vertical-align: middle;
 }
 
+.photo:hover {
+  cursor: zoom-in;
+}
+
 /* style for buttons and image gallery container text */
 .gallery_header {
   text-align: center;
