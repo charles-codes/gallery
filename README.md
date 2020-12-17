@@ -1,9 +1,9 @@
 # gallery
 =========================
 
-I am not much of a photographer, but I have been fortunate enough to spend some time outdoors in "The Last Best Place" of Montana, in particular the Flathead Valley. 
+I am not much of a photographer, but I have been fortunate enough to spend some time outdoors in "The Last Best Place" of Montana, in particular, the Flathead Valley. 
 
-This webpage is less of an opportunity to display my photographs and videos then a place to display and idea of web design for a photographer's portfolio. 
+This webpage is less of an opportunity to display my photographs and videos then a place to display an idea of web design for a photographer's portfolio. 
 
 =========================
 
