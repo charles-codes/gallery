@@ -92,7 +92,41 @@ html, body {
 }
 
 /* style for buttons and image gallery container text */
+.gallery_header {
+  text-align: center;
+  color: var(--offwhite);
+}
+
+h1 {
+  font-size: 36px;
+  text-shadow: 1px 1px 1px var(--brown);
+}
+
+.gallery_header > p {
+  font-size: 22px;
+}
+
+.button {
+  width: 60px;
+  height: 40px;
+  color: var(--brown);
+  background-color: var(--offwhite);
+  border: solid 2px var(--tan);
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: 'Josefin Sans', sans-serif;
+}
 
 .active {
-  color: blue;
+  background-color: var(--brown);
+  color: var(--offwhite);
+}
+
+.button:hover {
+  background-color: var(--wheat);
+  color: var(--brown);
+}
+
+.button:focus {
+  outline: none;
 }
