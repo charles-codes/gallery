@@ -21,23 +21,16 @@ html, body {
   color: white;
 }
 
+/* video_container <div> and other video style */
 .video_container {
   width: 100%;
   height: 580px;
   position: relative;
 }
 
-.text_block {
-  position: absolute;
-  top: 0;
-  left: 5%;
+.video_container_2 {
+  border-bottom: solid 5px var(--brown); 
 }
-
-.text_block_2 {
-  position: absolute;
-  top: 40%;
-  right: 5%;
-} 
 
 .video {
   float: left;
@@ -55,13 +48,18 @@ html, body {
   transform: rotate(90deg);
 }
 
-.space_break {
-  width: 100%;
-  height: 200px;
-  font-weight: bold;
-  text-shadow: 1px 1px var(--wheat);
+/* text_block <div> and poem_text <p> style */
+.text_block {
+  position: absolute;
+  top: 0;
+  left: 5%;
 }
 
+.text_block_2 {
+  position: absolute;
+  top: 40%;
+  right: 5%;
+} 
 .poem_text_1 {
   font-size: 28px;
   text-align: left;
@@ -74,4 +72,21 @@ html, body {
   text-align: left;
   color: var(--wheat);
   text-shadow: 1px 1px 1px var(--brown);
+}
+
+/* style for image gallery */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
 }
