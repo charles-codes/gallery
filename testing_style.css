@@ -1,0 +1,77 @@
+:root {
+  --wheat: #D9C179;
+  --tan: #D9CBA3;
+  --brown: #736140;
+  --lightbrown: #A6977C;
+  --offwhite: #F2EBDC;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+
+  background: radial-gradient(var(--offwhite), var(--lightbrown), var(--tan));
+
+  font-family: 'Josefin Sans', sans-serif;
+  color: white;
+}
+
+.video_container {
+  width: 100%;
+  height: 580px;
+  position: relative;
+}
+
+.text_block {
+  position: absolute;
+  top: 0;
+  left: 5%;
+}
+
+.text_block_2 {
+  position: absolute;
+  top: 40%;
+  right: 5%;
+} 
+
+.video {
+  float: left;
+}
+
+.video_snowfall {
+  border-bottom: solid 5px var(--brown);
+}
+
+#walk_video_1 {
+  transform:rotate(270deg);
+}
+
+#walk_video_2 {
+  transform: rotate(90deg);
+}
+
+.space_break {
+  width: 100%;
+  height: 200px;
+  font-weight: bold;
+  text-shadow: 1px 1px var(--wheat);
+}
+
+.poem_text_1 {
+  font-size: 28px;
+  text-align: left;
+  color: var(--brown);
+  text-shadow: 1px 1px 1px var(--offwhite);
+}
+
+.poem_text_2 {
+  font-size: 28px;
+  text-align: left;
+  color: var(--wheat);
+  text-shadow: 1px 1px 1px var(--brown);
+}
