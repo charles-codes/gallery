@@ -48,7 +48,7 @@ html, body {
   transform: rotate(90deg);
 }
 
-/* text_block <div> and poem_text <p> style */
+/* text_block <div> and poem_text <p> style for video_container */
 .text_block {
   position: absolute;
   top: 0;
@@ -74,6 +74,19 @@ html, body {
   text-shadow: 1px 1px 1px var(--brown);
 }
 
+/* text_block_3 <div> and poem_text_3 style for video_container_2 */
+.text_block_3 {
+  position: absolute;
+  left: 39.5%;
+  text-align: center;
+}
+
+.poem_text_3 {
+  font-size: 48px;
+  color: var(--offwhite);
+  text-shadow: 2px 2px 2px var(--lightbrown);
+}
+
 /* style for image gallery */
 .row {
   display: flex;
@@ -95,6 +108,8 @@ html, body {
 .gallery_header {
   text-align: center;
   color: var(--offwhite);
+  border-bottom: solid 5px var(--brown);
+  padding-bottom: 10px;
 }
 
 h1 {
@@ -103,7 +118,7 @@ h1 {
 }
 
 .gallery_header > p {
-  font-size: 22px;
+  font-size: 18px;
 }
 
 .button {
