@@ -49,17 +49,13 @@ html, body {
 }
 
 /* text_block <div> and poem_text <p> style for video_container */
-.text_block {
-  position: absolute;
-  top: 0;
-  left: 5%;
-}
 
 .text_block_2 {
   position: absolute;
   top: 44%;
-  right: 5%;
-} 
+  right: 8%;
+}
+
 .poem_text_1 {
   font-size: 28px;
   text-align: left;
@@ -70,14 +66,15 @@ html, body {
 /* text_block_3 <div> and poem_text_3 style for video_container_2 */
 .text_block_3 {
   position: absolute;
-  left: 39.5%;
-  text-align: center;
+  top: -47%;
+  text-align: left;
 }
 
 .poem_text_2 {
-  font-size: 48px;
+  font-size: 106px;
   color: var(--offwhite);
   text-shadow: 2px 2px 2px var(--lightbrown);
+  padding: 0;
 }
 
 /* style for image gallery */
@@ -85,6 +82,7 @@ html, body {
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
+  margin-bottom: 4px;
 }
 
 .column {
